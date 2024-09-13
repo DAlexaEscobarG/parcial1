@@ -10,6 +10,7 @@
 body{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 header{
@@ -115,7 +116,10 @@ h2{
     text-decoration: none;
 }
 
-
+iframe {
+    width: 100%; /* Para que ocupe el 100% del ancho de la pantalla */
+    height: auto;
+}
 
 .footer{
     width: 100%;
@@ -184,12 +188,23 @@ a{
 
 @media screen and (max-width: 480px) {
 
-
-
-    body #thesec{
+    body {
+        overflow-x: hidden;
+    }
+    
+    iframe {
         width: 100%;
         height: auto;
-        margin: 0 auto;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+    }
+
+    #thesec {
+        width: 100%;
+        padding: 0;
     }
 
     #logo{
@@ -261,6 +276,7 @@ a{
         height: auto;
         width: 100%;
         margin: 0 auto;
+        padding: 0;
     }
     
 
@@ -326,11 +342,10 @@ a{
         text-decoration: none;
     }
 
-    .video{
-        width: 70%;
-        height: 250px;
-
-    }
+    .video {
+    width: 100%; /* Cambiar de 70% a 100% para pantallas pequeñas */
+    height: auto;
+}
 
     .footer{
         width: 100%;
